@@ -1,0 +1,369 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  align-items: center;
+}
+
+.gradient {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #0095f6;
+  font-size: 16px;
+  width: 320px;
+  padding: 10px;
+  color: white;
+}
+
+.mid-container {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 615px;
+  .create {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #0095f6;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    color: white;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.action-btn {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active {
+  color: #8e8e8e;
+}
+
+img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.post-settings {
+  border: 1px solid #dbdbdb;
+  border-radius: 15px;
+  height: auto;
+  padding: 25px;
+  max-width: 615px;
+  margin: 0 auto;
+
+  .header {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .setting {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dbdbdb;
+
+    .title {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+
+    .form {
+      padding: 5px 0px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      width: 150px;
+      text-align: left;
+      margin-right: 20px;
+      margin-bottom: 6px;
+    }
+
+    .pd-more {
+      margin-bottom: 10px;
+    }
+
+    .input {
+      display: table-cell;
+      vertical-align: middle;
+      width: 80%;
+
+      input {
+        line-height: 40px;
+        margin-top: 10px;
+        font-size: 16px;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        padding: 5px;
+        height: 35px;
+        width: 320px;
+      }
+    }
+
+    .textarea {
+      vertical-align: middle;
+      width: 80%;
+
+      textarea {
+        resize: vertical;
+        margin-top: 10px;
+        font-size: 16px;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        padding: 5px 10px;
+        height: 120px;
+        width: 320px;
+      }
+    }
+
+    .file {
+      vertical-align: middle;
+      margin: 5px 0px;
+
+      label {
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #0095f6;
+        font-size: 16px;
+        width: 320px;
+        padding: 5px;
+        color: white;
+      }
+
+      input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    .actions {
+      width: 100%;
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+.post {
+  margin: 0 auto;
+  max-width: 615px;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  font-weight: 600;
+
+  &-header {
+    padding: 0px 16px;
+
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .more {
+      margin-left: auto;
+      position: relative;
+    }
+
+    .author {
+      width: 400px;
+      display: flex;
+      vertical-align: middle;
+      align-items: center;
+      img {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+      }
+      .name {
+        margin-left: 13px;
+        cursor: pointer;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &-content {
+    img {
+      max-height: 615px;
+      object-fit: cover;
+      width: 100%;
+    }
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-actions {
+    span:not(:first-child) {
+      padding-left: 18px;
+    }
+    display: flex;
+    padding: 8px 16px;
+    width: 100%;
+    align-items: center;
+    .right {
+      margin-left: auto;
+    }
+  }
+
+  &-info {
+    padding: 2px 16px;
+    align-items: center;
+    &-text {
+      padding-top: 8px;
+      padding-bottom: 2px;
+      display: flex;
+      .name {
+        margin-right: 5px;
+      }
+      .description {
+        width: auto;
+        font-weight: 400;
+      }
+    }
+
+    &-comments-more {
+      font-weight: 400;
+      color: #8e8e8e;
+    }
+
+    &-comments {
+      padding-top: 4px;
+      .comment {
+        padding-top: 2px;
+        display: flex;
+        .name {
+          margin-right: 5px;
+        }
+        .text {
+          font-weight: 400;
+        }
+        span {
+          margin-left: auto;
+        }
+      }
+    }
+
+    &-time {
+      word-spacing: 1.2px;
+      color: #8e8e8e;
+      padding-top: 8px;
+      font-size: 11px;
+      font-weight: 400;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    margin-top: 10px;
+    height: 1px;
+    border: 1px solid #efefef;
+  }
+
+  &-comment {
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+
+    span {
+      margin-top: 5px;
+    }
+
+    .text {
+      margin-left: 16px;
+      color: #a3a3a3;
+      font-weight: 400;
+    }
+
+    .share {
+      color: #b3dffc;
+      margin-left: auto;
+    }
+  }
+}
+
+.footer {
+  background: #fff;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  p:first-child {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5851db,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}

@@ -68,6 +68,21 @@ export default function App() {
     takeScreenshot(postRef.current);
   };
 
+  const reset = () => {
+    setIsLiked(false)
+    setIsSaved(false)
+
+    setCommentName("")
+    setCommentText("")
+    setCommentIsLiked(false)
+    setName("")
+    setAvatar()
+    setImage()
+    setLikes(50)
+    setCommentsMore(20)
+    setComments([])
+  }
+
   useEffect(() => {
     setLangText(language[lang]);
   }, [lang]);
@@ -114,7 +129,6 @@ export default function App() {
 
   const handleImage = (e) => {
     const file = e.target.files[0];
-    console.log(file);
     const reader = new FileReader();
     reader.addEventListener("load", function () {
       setImage(this.result);
@@ -216,6 +230,9 @@ export default function App() {
       <div className="mid-container">
         <button className="create" onClick={getScreenshot}>
           {langText?.create}
+        </button>
+        <button className="reset" onClick={reset}>
+          {langText?.reset}
         </button>
         <a href="#settings">
           <h1>

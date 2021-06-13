@@ -231,7 +231,7 @@ export default function App() {
               type="text"
               value={name}
               onChange={(e) =>
-                e.target.value.length < 25 ? setName(e.target.value) : 0
+                e.target.value.length < 26 ? setName(e.target.value) : 0
               }
             />
           </div>

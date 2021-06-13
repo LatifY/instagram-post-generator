@@ -1,5 +1,5 @@
 import React, { useState, createRef, useEffect } from "react";
-
+import Lang from "./components/Lang";
 import { language } from "./localizations";
 import {
   AvatarLoader,
@@ -21,7 +21,7 @@ import {
   OutlineSaveIcon,
   FilledSaveIcon,
   EmojiIcon,
-  DownArrow
+  DownArrow,
 } from "./icons";
 import ActionButton from "./components/ActionButton";
 import slugify from "slugify";
@@ -56,7 +56,7 @@ export default function App() {
   const [text, setText] = useState();
   const [time, setTime] = useState();
 
-  const [lang, setLang] = useState("tr");
+  const [lang, setLang] = useState("en");
   const [langText, setLangText] = useState();
 
   const postRef = createRef(null);
@@ -217,7 +217,11 @@ export default function App() {
         <button className="create" onClick={getScreenshot}>
           {langText?.create}
         </button>
-        <a href="#settings"><h1><DownArrow/></h1></a>
+        <a href="#settings">
+          <h1>
+            <DownArrow />
+          </h1>
+        </a>
       </div>
 
       <div className="post-settings" id="settings">
@@ -385,8 +389,25 @@ export default function App() {
       <br />
       <br />
       <div className="footer">
-        <p><span>Instagram Post Generator</span> - <a href="https://latifyilmaz.com">Latif Yılmaz</a></p>
-        <p>💻 ve ☕ ile yapıldı :)</p>
+        <p>
+          <span>Instagram Post Generator</span> -{" "}
+          <a href="https://latifyilmaz.com">Latif Yılmaz</a>
+        </p>
+        <p>{langText?.credit}</p>
+        <br />
+        <p>
+          <Lang
+            text="English"
+            onClick={() => setLang("en")}
+            active={lang === "en"}
+          />{" "}
+          •{" "}
+          <Lang
+            text="Türkçe"
+            onClick={() => setLang("tr")}
+            active={lang === "tr"}
+          />
+        </p>
       </div>
     </>
   );

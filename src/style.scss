@@ -345,7 +345,8 @@ img {
   text-align: center;
   width: 100%;
   padding: 15px;
-  p:first-child {
+  p:first-child,
+  p:last-child {
     background: linear-gradient(
       45deg,
       #405de6,

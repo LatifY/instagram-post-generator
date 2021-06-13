@@ -21,7 +21,9 @@ const tr = {
 
   create_comment:"Yorum Ekle",
   comment:"Yorum",
-  add:"Ekle"
+  add:"Ekle",
+
+  credit:"💗 ve ☕ ile yapıldı :)"
 };
 
 const en = {
@@ -47,7 +49,9 @@ const en = {
 
   create_comment:"Add Comment",
   comment:"Comment",
-  add:"Add"
+  add:"Add",
+
+  credit:"Made with 💗 and ☕ :)"
 };
 
 export const language = {
